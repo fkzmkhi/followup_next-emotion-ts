@@ -75,13 +75,13 @@ const SliderWrapper = styled.div`
   }
 
   .splide__pagination__page {
-    background: rgba(255, 255, 255, 0.4);
+    background: ${props => props.theme.colors.surface};
     width: 8px;
     height: 8px;
     transition: all 0.3s ease;
 
     &.is-active {
-      background: ${props => props.theme.colors?.secondary};
+      background: ${props => props.theme.colors.text};
       transform: scale(1.4);
     }
   }
@@ -129,15 +129,15 @@ const TextOverlay = styled.div`
 `;
 
 const SlideTitle = styled.h2`
-  font-size: ${props => props.theme.typography?.fontSizes?.xl || "2rem"};
-  font-weight: ${props => props.theme.typography?.fontWeights?.bold || 700};
+  font-size: ${props => props.theme.typography.fontSizes.xl};
+  font-weight: ${props => props.theme.typography.fontWeights.bold};
   margin-bottom: 16px;
   text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
 `;
 
 const SlideDescription = styled.p`
-  font-size: ${props => props.theme.typography?.fontSizes?.md || "1rem"};
-  color: ${props => props.theme.colors?.textMuted || "#A9ABB3"};
+  font-size: ${props => props.theme.typography.fontSizes.md};
+  color: ${props => props.theme.colors.textMuted};
   margin-bottom: 28px;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
   line-height: 1.6;

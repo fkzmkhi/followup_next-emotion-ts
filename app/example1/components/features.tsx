@@ -35,8 +35,8 @@ const StyledFeature = styled.section`
 const SectionTitle = styled.h2`
   text-align: center;
   margin-bottom: 40px;
-  font-size: ${props => props.theme.typography?.fontSizes?.lg || "1.75rem"};
-  font-weight: ${props => props.theme.typography?.fontWeights?.bold || 700};
+  font-size: ${props => props.theme.typography.fontSizes.lg};
+  font-weight: ${props => props.theme.typography.fontWeights.bold};
 `;
 
 const CardGrid = styled.div`

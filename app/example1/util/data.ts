@@ -92,7 +92,7 @@ export const DUMMY_CARD_ITEMS: CardItem[] = [
     },
     {
         id: 6,
-        src: "https://images.unsplash.com/photo-1542744094-3a31f103e35f?auto=format&fit=crop&w=600&h=400&q=80",
+        src: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=600&h=400&q=80",
         alt: "Corporate Branding Strategy",
         title: "Marketing & Branding",
         description: "ブランド認知度を向上させ、ターゲット層へ確実にアプローチするためのマーケティング戦略を展開します。",

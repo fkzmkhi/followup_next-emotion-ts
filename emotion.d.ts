@@ -4,12 +4,12 @@ import "@emotion/react";
 
 declare module "@emotion/react" {
   export interface Theme {
-    transitions?: {
+    transitions: {
       default: string;
       fast: string;
       slow: string;
     };
-    typography?: {
+    typography: {
       fontSizes: {
         xs: string;
         sm: string;
@@ -23,7 +23,7 @@ declare module "@emotion/react" {
         bold: number;
       };
     };
-    zIndex?: {
+    zIndex: {
       base: number;
       dropdown: number;
       header: number;

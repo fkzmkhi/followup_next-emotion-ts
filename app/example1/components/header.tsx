@@ -90,45 +90,45 @@ const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: ${props => props.theme.spacing?.(2.5) || "20px"} ${props => props.theme.spacing?.(5) || "40px"};
+  padding: ${props => props.theme.spacing(2.5)} ${props => props.theme.spacing(5)};
   position: relative;
-  background-color: ${props => props.theme.colors?.surface || "#1E2128"};
-  border-bottom: 1px solid ${props => props.theme.colors?.border || "rgba(169,171,179,0.2)"};
+  background-color: ${props => props.theme.colors.surface};
+  border-bottom: 1px solid ${props => props.theme.colors.border};
 
   @media (max-width: 768px) {
-    padding: ${props => props.theme.spacing?.(2.5) || "20px"};
-    position:fixed;
+    padding: ${props => props.theme.spacing(2.5)};
+    position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    z-index: ${props => props.theme.zIndex?.header};
+    z-index: ${props => props.theme.zIndex.header};
   }
 `;
 
 const LogoArea = styled.div`
   display: flex;
   align-items: center;
-  z-index: ${props => (props.theme.zIndex?.overlay || 1000) + 1};
+  z-index: ${props => (props.theme.zIndex.overlay ?? 1000) + 1};
 `;
 
 const DesktopNav = styled.nav`
   ul {
     display: flex;
     list-style: none;
-    gap: ${props => props.theme.spacing?.(3.5) || "28px"};
+    gap: ${props => props.theme.spacing(3.5)};
     margin: 0;
     padding: 0;
   }
 
   a {
-    color: ${props => props.theme.colors?.text || "#F5F5F7"};
-    font-size: ${props => props.theme.typography?.fontSizes?.sm || "0.875rem"};
-    font-weight: ${props => props.theme.typography?.fontWeights?.medium || 500};
+    color: ${props => props.theme.colors.text};
+    font-size: ${props => props.theme.typography.fontSizes.sm};
+    font-weight: ${props => props.theme.typography.fontWeights.medium};
     text-decoration: none;
-    transition: ${props => props.theme.transitions?.default || "all 0.2s"};
+    transition: ${props => props.theme.transitions.default};
 
     &:hover {
-      color: ${props => props.theme.colors?.secondary || "#899DFA"};
+      color: ${props => props.theme.colors.secondary};
     }
   }
 
@@ -146,7 +146,7 @@ const MenuButton = styled.button<MenuButtonProps>`
   border: none;
   cursor: pointer;
   padding: 0;
-  z-index: ${props => (props.theme.zIndex?.overlay || 1000) + 1}; /* ドロワーより前面に出す */
+  z-index: ${props => (props.theme.zIndex.overlay ?? 1000) + 1}; /* ドロワーより前面に出す */
   display: none;
   flex-direction: column;
   gap: 6px;
@@ -155,7 +155,7 @@ const MenuButton = styled.button<MenuButtonProps>`
     display: block;
     width: 24px;
     height: 2px;
-    background-color: ${props => props.theme.colors?.text || "#FFF"};
+    background-color: ${props => props.theme.colors.text};
     transition: transform 0.3s ease, opacity 0.3s ease;
     transform-origin: center;
   }
@@ -188,10 +188,9 @@ const MobileNav = styled.nav<MobileNavProps>`
   right: 0;
   width: 100%;
   height: 100vh;
-  background-color: ${props => props.theme.colors?.surface || "#1E2128"};
-  z-index: ${props => props.theme.zIndex?.overlay || 1000};
+  background-color: ${props => props.theme.colors.surface};
+  z-index: ${props => props.theme.zIndex.overlay};
   
-  /* アニメーションさせつつ、閉じている時はTabキーが入らないようにする */
   visibility: ${props => props.isOpen ? "visible" : "hidden"};
   opacity: ${props => props.isOpen ? 1 : 0};
   pointer-events: ${props => props.isOpen ? "auto" : "none"};
@@ -207,19 +206,19 @@ const MobileNav = styled.nav<MobileNavProps>`
     padding: 0;
     display: flex;
     flex-direction: column;
-    gap: ${props => props.theme.spacing?.(4) || "32px"};
+    gap: ${props => props.theme.spacing(4)};
     text-align: center;
   }
 
   a {
-    color: ${props => props.theme.colors?.text || "#F5F5F7"};
-    font-size: ${props => props.theme.typography?.fontSizes?.lg || "1.25rem"};
-    font-weight: ${props => props.theme.typography?.fontWeights?.bold || 700};
+    color: ${props => props.theme.colors.text};
+    font-size: ${props => props.theme.typography.fontSizes.lg};
+    font-weight: ${props => props.theme.typography.fontWeights.medium};
     text-decoration: none;
-    transition: ${props => props.theme.transitions?.default || "all 0.2s"};
+    transition: ${props => props.theme.transitions.default};
 
     &:hover {
-      color: ${props => props.theme.colors?.secondary || "#899DFA"};
+      color: ${props => props.theme.colors.secondary};
     }
   }
 
