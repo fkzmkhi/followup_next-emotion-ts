@@ -5,7 +5,7 @@ import { useTheme } from "@emotion/react";
 import styled from "@emotion/styled";
 import Link from "next/link";
 import Image from "next/image";
-import { DUMMY_LOGO } from "@/app/example1/util/data";
+import { DUMMY_LOGO } from "@/app/(examples)/util/data";
 
 export default function Header() {
   const theme = useTheme();

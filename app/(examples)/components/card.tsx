@@ -3,7 +3,7 @@
 import styled from "@emotion/styled";
 import Image from "next/image";
 import Link from "next/link";
-import { CardItem as CardItemType } from "@/app/example1/util/data";
+import { CardItem as CardItemType } from "@/app/(examples)/util/data";
 
 export default function CardItem({ src, title, description, link }: CardItemType) {
 	return (

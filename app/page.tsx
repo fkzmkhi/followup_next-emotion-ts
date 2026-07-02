@@ -46,9 +46,11 @@ interface AppTheme {
   };
   spacing: (factor: number) => string;
   borderRadius: {
+    none: string;
     sm: string;
     md: string;
     lg: string;
+    xl: string;
     full: string;
   };
 }
@@ -73,9 +75,11 @@ const darkTheme: AppTheme = {
   },
   spacing: (factor) => `${factor * 8}px`,
   borderRadius: {
+    none: "0px",
     sm: "4px",
     md: "8px",
     lg: "16px",
+    xl: "24px",
     full: "9999px",
   },
 };
@@ -96,9 +100,11 @@ const lightTheme: AppTheme = {
   },
   spacing: (factor) => `${factor * 8}px`,
   borderRadius: {
+    none: "0px",
     sm: "4px",
     md: "8px",
     lg: "16px",
+    xl: "24px",
     full: "9999px",
   },
 };
@@ -631,6 +637,25 @@ export default function Home() {
                   `}
                 >
                   example1
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/example2"
+                  css={(theme) => css`
+                    display: block;
+                    padding: ${theme.spacing(1)};
+                    color: ${theme.colors.text};
+                    text-decoration: none;
+                    border-radius: ${theme.borderRadius.sm};
+                    transition: all 0.3s ease;
+                    &:hover {
+
+                      color: ${theme.colors.primary};
+                    }
+                  `}
+                >
+                  example2 (Contact Form)
                 </Link>
               </li>
             </ul>
