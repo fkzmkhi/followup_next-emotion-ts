@@ -3,26 +3,26 @@
 import styled from "@emotion/styled";
 import Image from "next/image";
 import Link from "next/link";
-import { CardItem as CardItemType } from "@/app/(examples)/util/data";
+import { CardItem as CardItemType } from "@/app/(examples)/example1/util/data";
 
 export default function CardItem({ src, title, description, link }: CardItemType) {
-	return (
-		<CardItemWrapper>
-			<CardImageFrame>
-				<CardImage
-					src={src}
-					alt={title}
-					width={600}
-					height={400}
-				/>
-			</CardImageFrame>
-			<CardBody>
-				<CardTitle>{title}</CardTitle>
-				<CardDescription>{description}</CardDescription>
-				<CardLink href={link || "/"}>Read More</CardLink>
-			</CardBody>
-		</CardItemWrapper>
-	);
+  return (
+    <CardItemWrapper>
+      <CardImageFrame>
+        <CardImage
+          src={src}
+          alt={title}
+          width={600}
+          height={400}
+        />
+      </CardImageFrame>
+      <CardBody>
+        <CardTitle>{title}</CardTitle>
+        <CardDescription>{description}</CardDescription>
+        <CardLink href={link || "/"}>Read More</CardLink>
+      </CardBody>
+    </CardItemWrapper>
+  );
 }
 
 const CardImage = styled(Image)`

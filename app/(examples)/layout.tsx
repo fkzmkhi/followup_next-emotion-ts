@@ -3,8 +3,8 @@
 import React from "react";
 import { ThemeProvider } from "@emotion/react";
 import styled from "@emotion/styled";
-import Header from "./components/header";
-import Footer from "./components/footer";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import { currentTheme } from "@/app/example-theme";
 
 export default function ExamplesLayout({ children }: { children: React.ReactNode }) {

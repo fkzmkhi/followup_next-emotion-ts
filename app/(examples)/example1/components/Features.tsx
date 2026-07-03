@@ -2,7 +2,7 @@
 
 import React from "react";
 import styled from "@emotion/styled";
-import CardItem from "./card"
+import CardItem from "./Card"
 import { DUMMY_CARD_ITEMS } from "../util/data"
 
 export default function Features() {
