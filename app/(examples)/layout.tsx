@@ -27,6 +27,6 @@ const PageWrapper = styled.div`
     padding-top: 74px; /* Headerの高さ分空ける */
   }
   main {
-    flex: 1;
+
   }
 `;

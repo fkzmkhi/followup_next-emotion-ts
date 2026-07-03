@@ -109,6 +109,28 @@ const lightTheme: AppTheme = {
   },
 };
 
+interface ExampleLink {
+  href: string;
+  label: string;
+}
+const exampleLinks: Array<ExampleLink> = [
+  {
+    href: "/example1",
+    label: "Basic Markup",
+  },
+  {
+    href: "/example2",
+    label: "Contact Form",
+  },
+  {
+    href: "/example3",
+    label: "Movie Search",
+  },
+  {
+    href: "/example4",
+    label: "Weather App",
+  },
+];
 // ==========================================
 // 💡 正解・お手本のスタイル定義 (比較用)
 // ==========================================
@@ -613,6 +635,7 @@ export default function Home() {
             <ul
               css={(theme) => css`
                 margin-top: ${theme.spacing(1)};
+                margin-bottom:0;
                 list-style: none;
                 display: flex;
                 flex-direction: column;
@@ -620,44 +643,27 @@ export default function Home() {
                 padding-left: 0;
               `}
             >
-              <li>
-                <Link
-                  href="/example1"
-                  css={(theme) => css`
+              {exampleLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    css={(theme) => css`
                     display: block;
-                    padding: ${theme.spacing(1)};
+                    padding-left: ${theme.spacing(1)};
                     color: ${theme.colors.text};
                     text-decoration: none;
                     border-radius: ${theme.borderRadius.sm};
                     transition: all 0.3s ease;
                     &:hover {
-
-                      color: ${theme.colors.primary};
+                    color: ${theme.colors.primary};
                     }
                   `}
-                >
-                  example1
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/example2"
-                  css={(theme) => css`
-                    display: block;
-                    padding: ${theme.spacing(1)};
-                    color: ${theme.colors.text};
-                    text-decoration: none;
-                    border-radius: ${theme.borderRadius.sm};
-                    transition: all 0.3s ease;
-                    &:hover {
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
 
-                      color: ${theme.colors.primary};
-                    }
-                  `}
-                >
-                  example2 (Contact Form)
-                </Link>
-              </li>
             </ul>
           </div>
           {/* Theme Toggle */}

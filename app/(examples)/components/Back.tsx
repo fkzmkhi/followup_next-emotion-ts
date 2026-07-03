@@ -2,9 +2,9 @@ import Link from "next/link";
 import styled from "@emotion/styled";
 
 export default function Back() {
-    return (
-        <BackLink href="/">Back To Top</BackLink>
-    );
+  return (
+    <BackLink href="/">Back To Top</BackLink>
+  );
 }
 
 const BackLink = styled(Link)`
@@ -17,7 +17,8 @@ const BackLink = styled(Link)`
   font-size: ${(props) => props.theme.typography.fontSizes.sm};
   font-weight: ${(props) => props.theme.typography.fontWeights.medium};
   text-decoration: none;
-  padding-bottom: ${(props) => props.theme.spacing(8)};
+  margin-top: ${(props) => props.theme.spacing(8)};
+    margin-bottom: ${(props) => props.theme.spacing(8)};
   text-decoration:underline;
   &:hover {
      text-decoration:none;

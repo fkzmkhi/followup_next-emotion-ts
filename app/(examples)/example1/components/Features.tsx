@@ -27,7 +27,7 @@ export default function Features() {
 }
 
 const StyledFeature = styled.section`
-  padding: 80px 20px;
+  padding: 80px 20px 0;
   max-width: 1200px;
   margin: 0 auto;
 `;

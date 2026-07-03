@@ -2,12 +2,16 @@
 
 import React from "react";
 import styled from "@emotion/styled";
+import Back from "./Back";
 
 export default function Footer() {
   return (
-    <StyledFooter>
-      <p>© 2024 Example Corporation. All rights reserved.</p>
-    </StyledFooter>
+    <>
+      <Back />
+      <StyledFooter>
+        <p>© 2024 Example Corporation. All rights reserved.</p>
+      </StyledFooter>
+    </>
   );
 }
 
