@@ -1,6 +1,7 @@
 {
     "conventionalCommits.scopes": [
         "app/example1/components",
-        "app/(examples)/example2"
+        "app/(examples)/example2",
+        "app/(examples)/example3"
     ]
 }
