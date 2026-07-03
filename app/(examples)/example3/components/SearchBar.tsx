@@ -13,7 +13,7 @@ export default function SearchBar({ query, onQueryChange, placeholder }: SearchB
 	return (
 		<SearchBarContainer>
 			<SearchBarWrapper>
-				<SearchBarTitle>映画を検索</SearchBarTitle>
+				<SearchBarTitle>海外TV作品を検索</SearchBarTitle>
 				<SearchInput type="text" value={query} onChange={(e) => onQueryChange(e.target.value)} placeholder={placeholder} />
 			</SearchBarWrapper>
 		</SearchBarContainer>
